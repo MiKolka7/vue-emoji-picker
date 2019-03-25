@@ -75,9 +75,11 @@
         this.$emit('emoji', emoji)
       },
       toggle(e) {
-        this.display.visible = ! this.display.visible
-        this.display.x = e.clientX
-        this.display.y = e.clientY
+        setTimeout(() => {
+          this.display.visible = ! this.display.visible
+          this.display.x = e.clientX
+          this.display.y = e.clientY
+        })
       },
       hide() {
         this.display.visible = false
