@@ -59,5 +59,8 @@
     "watchify": "^3.11.1",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^3.2.0"
+  },
+  "dependencies": {
+    "v-click-outside": "^2.1.3"
   }
 }
