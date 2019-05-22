@@ -4,7 +4,6 @@
   "version": "1.0.2",
   "main": "dist-module/main.js",
   "scripts": {
-    "prepublish": "npm run build && npm run browser-build",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "browser-build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/vue-emoji-picker.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/vue-emoji-picker.js"
@@ -59,5 +58,8 @@
     "watchify": "^3.11.1",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^3.2.0"
+  },
+  "dependencies": {
+    "v-click-outside": "^2.1.3"
   }
 }

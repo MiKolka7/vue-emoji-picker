@@ -20,8 +20,12 @@
 
 <script>
   import emojis from '../emojis'
+  import vClickOutside from 'v-click-outside'
 
   export default {
+    directives: {
+      clickOutside: vClickOutside.directive
+    },
     props: {
       search: {
         type: String,
